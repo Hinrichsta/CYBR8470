@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'labsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("POSTGRES_DB"),
-        'USER': os.getenv("POSTGRES_USER"),
-        'PASSWORD': os.getenv("POSTGRES_PASSWORD"),
-        'HOST': os.getenv("POSTGRES_HOST"),
-        'PORT': os.getenv("POSTGRES_PORT"),
+        'NAME': os.getenv("POSTGRES_DB", "labsite"),
+        'USER': os.getenv("POSTGRES_USER", "lab"),
+        'PASSWORD': os.getenv("POSTGRES_PASSWORD", "insecure561!$"),
+        'HOST': os.getenv("POSTGRES_HOST", "postgres"),
+        'PORT': os.getenv("POSTGRES_PORT", "5432"),
     }
 }
 

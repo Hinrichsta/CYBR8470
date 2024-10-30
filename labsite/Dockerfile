@@ -6,5 +6,8 @@ WORKDIR /usr/src/app
 # copy all the files to the container
 COPY . .
 
+# Create .env file if it doesn't exist
+RUN touch ./.env
+
 # install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
